@@ -7,7 +7,7 @@
 ## set the value of the inverse of the matrix
 ## get the value of the inverse of the matrix
 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = numeric()) {
 
         m <- NULL
         set <- function(y) {
