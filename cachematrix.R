@@ -31,9 +31,15 @@ cacheSolve <- function(x, ...) {
 
         m <- x$getinverse()
         if(!is.null(m)) {
+
+                ##cache matrix is not null, therefore, retrieving from cache
+
                 message("getting cached data")
                 return(m)
         }
+
+        ##cache was empty, therefore inverse matrix has to be calculated
+
         data <- x$get()
         m <- solve(data, ...)
         x$setinverse(m)
